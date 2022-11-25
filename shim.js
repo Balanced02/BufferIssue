@@ -15,10 +15,10 @@ if (typeof process === 'undefined') {
   }
 }
 
-process.browser = false;
 if (typeof Buffer === 'undefined') {
   global.Buffer = require('buffer').Buffer;
 }
+process.browser = false;
 
 // global.location = global.location || { port: 80 }
 const isDev = typeof __DEV__ === 'boolean' && __DEV__;
@@ -28,9 +28,9 @@ if (typeof localStorage !== 'undefined') {
 }
 
 if (!global.WebAssembly) {
-  global.WebAssembly = require('react-native-wasm');
+  global.WebAssembly = require('webassemblyjs');
 }
 
 // If using the crypto shim, uncomment the following line to ensure
 // crypto is loaded first, so it can populate global.crypto
-// require('crypto')
+require('crypto');

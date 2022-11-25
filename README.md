@@ -23,4 +23,4 @@ const hashOptions = {
 - NB: This happens only when debugger mode is disabled. If you're debugging with chrome, the function works fine without any errors
 
 ### My Opinion
-I feel the difference in node environemt used by chrome-debug mode plays a role to this error.
+I feel the difference in node environment used by chrome-debug mode plays a role to this error.

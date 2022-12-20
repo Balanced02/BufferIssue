@@ -8,7 +8,7 @@
     "start": "react-native start",
     "link": "./node_modules/.bin/rn-nodeify --hack --install",
     "test": "jest",
-    "postinstall": "jetify",
+    "postinstall": "npx patch-package && jetify",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -30,7 +30,7 @@
     "punycode": "^1.4.1",
     "querystring-es3": "^0.2.1",
     "react": "18.1.0",
-    "react-native": "0.70.5",
+    "react-native": "0.70.6",
     "react-native-crypto": "^2.2.0",
     "react-native-level-fs": "^3.0.1",
     "react-native-os": "^1.2.6",
@@ -45,8 +45,7 @@
     "tty-browserify": "^0.0.0",
     "url": "^0.10.3",
     "util": "^0.10.4",
-    "vm-browserify": "^0.0.4",
-    "webassemblyjs": "^1.11.3"
+    "vm-browserify": "^0.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

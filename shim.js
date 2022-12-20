@@ -28,7 +28,7 @@ if (typeof localStorage !== 'undefined') {
 }
 
 if (!global.WebAssembly) {
-  global.WebAssembly = require('webassemblyjs');
+  global.WebAssembly = require('react-native-wasm');
 }
 
 // If using the crypto shim, uncomment the following line to ensure

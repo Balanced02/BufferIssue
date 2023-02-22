@@ -38,7 +38,7 @@ if (typeof localStorage !== 'undefined') {
 }
 
 if (!global.WebAssembly) {
-  global.WebAssembly = WebAssembly;
+  global.WebAssembly = require('webassemblyjs');
 }
 
 // If using the crypto shim, uncomment the following line to ensure

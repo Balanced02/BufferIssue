@@ -47,12 +47,12 @@ const App = () => {
         outputType: 'binary', // we use output binary
       };
 
-      const result = await HashWasm.argon2id(hashOptions);
+      // const result = await HashWasm.argon2id(hashOptions);
 
-      // const result = await cryptography.encrypt.encryptMessageWithPassword(
-      //   'messagebuff',
-      //   'password',
-      // );
+      const result = await cryptography.encrypt.encryptMessageWithPassword(
+        'messagebuff',
+        'password',
+      );
       console.log('result', result);
     } catch (error) {
       console.error('error', error);

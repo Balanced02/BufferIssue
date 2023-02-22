@@ -1,3 +1,8 @@
+// import 'react-native-wasm';
+
+if (typeof global.BigInt === 'undefined') {
+  global.BigInt = require('big-integer');
+}
 if (typeof __dirname === 'undefined') {
   global.__dirname = '/';
 }
@@ -18,6 +23,11 @@ if (typeof process === 'undefined') {
 if (typeof Buffer === 'undefined') {
   global.Buffer = require('buffer').Buffer;
 }
+
+global.Buffer.prototype.reverse = function () {
+  return require('buffer-reverse')(this, arguments);
+};
+
 process.browser = false;
 
 // global.location = global.location || { port: 80 }
@@ -28,7 +38,7 @@ if (typeof localStorage !== 'undefined') {
 }
 
 if (!global.WebAssembly) {
-  global.WebAssembly = require('webassemblyjs');
+  global.WebAssembly = WebAssembly;
 }
 
 // If using the crypto shim, uncomment the following line to ensure

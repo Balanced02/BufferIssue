@@ -2184,6 +2184,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+big-integer@^1.6.51:
+  version "1.6.51"
+  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.51.tgz#0df92a5d9880560d3ff2d5fd20245c889d130686"
+  integrity sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==
+
 bip39@3.0.3:
   version "3.0.3"
   resolved "https://npm.lisk.com/bip39/-/bip39-3.0.3.tgz#4a8b79067d6ed2e74f9199ac994a2ab61b176760"
@@ -2344,7 +2349,7 @@ buffer-from@^1.0.0:
   resolved "https://npm.lisk.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
   integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
 
-buffer-reverse@1.0.1:
+buffer-reverse@1.0.1, buffer-reverse@^1.0.1:
   version "1.0.1"
   resolved "https://npm.lisk.com/buffer-reverse/-/buffer-reverse-1.0.1.tgz#49283c8efa6f901bc01fa3304d06027971ae2f60"
   integrity sha1-SSg8jvpvkBvAH6MwTQYCeXGuL2A=
@@ -6439,7 +6444,7 @@ react-native-udp@^2.7.0:
 
 react-native-wasm@^0.1.3:
   version "0.1.3"
-  resolved "https://npm.lisk.com/react-native-wasm/-/react-native-wasm-0.1.3.tgz#097216a71907c1345d01c779e37b4408b2c052b6"
+  resolved "https://registry.yarnpkg.com/react-native-wasm/-/react-native-wasm-0.1.3.tgz#097216a71907c1345d01c779e37b4408b2c052b6"
   integrity sha512-61LItNsXtVOF0q2TFS3pltjdcpHMljkjBFJXFC2mBA89a5/OCtGoB3YSsI3TzCkINSpuBGQ0HeSYd+TH6mpppg==
 
 react-native@0.70.6:

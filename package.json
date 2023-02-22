@@ -12,6 +12,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@craftzdog/react-native-buffer": "^6.0.5",
     "@liskhq/lisk-client": "6.0.0-alpha.4",
     "@tradle/react-native-http": "^2.0.1",
     "argon2-browser": "^1.18.0",
@@ -45,7 +46,8 @@
     "tty-browserify": "^0.0.0",
     "url": "^0.10.3",
     "util": "^0.10.4",
-    "vm-browserify": "^0.0.4"
+    "vm-browserify": "^0.0.4",
+    "webassemblyjs": "^1.11.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -86,7 +88,7 @@
     "timers": "timers-browserify",
     "tty": "tty-browserify",
     "vm": "vm-browserify",
-    "webassembly": "react-native-wasm",
+    "webassembly": "webassemblyjs",
     "tls": false
   },
   "browser": {

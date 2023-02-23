@@ -36,6 +36,7 @@ const App = () => {
       // const result = await Argon2.hash({pass: 'password', salt: 'somesalt'});
       const salt = cryptography.utils.getRandomBytes(16);
       console.log('salt', salt);
+      console.log('salt.toString()', salt.toString('base64'));
 
       const hashOptions = {
         password: 'password',
@@ -47,12 +48,12 @@ const App = () => {
         outputType: 'binary', // we use output binary
       };
 
-      // const result = await HashWasm.argon2id(hashOptions);
+      const result = await HashWasm.argon2id(hashOptions);
 
-      const result = await cryptography.encrypt.encryptMessageWithPassword(
-        'messagebuff',
-        'password',
-      );
+      // const result = await cryptography.encrypt.encryptMessageWithPassword(
+      //   'messagebuff',
+      //   'password',
+      // );
       console.log('result', result);
     } catch (error) {
       console.error('error', error);

@@ -1,4 +1,6 @@
-// import 'react-native-wasm';
+import { Platform } from 'react-native'
+
+const isAndroid = Platform.OS === 'android'
 
 if (typeof global.BigInt === 'undefined') {
   global.BigInt = require('big-integer');
@@ -20,13 +22,14 @@ if (typeof process === 'undefined') {
   }
 }
 
-if (typeof Buffer === 'undefined') {
+if (isAndroid) {
+  require('react-native-wasm');
   global.Buffer = require('buffer').Buffer;
-}
 
-global.Buffer.prototype.reverse = function () {
-  return require('buffer-reverse')(this, arguments);
-};
+  global.Buffer.prototype.reverse = function () {
+    return require('buffer-reverse')(this, arguments);
+  };
+}
 
 process.browser = false;
 
@@ -35,10 +38,6 @@ const isDev = typeof __DEV__ === 'boolean' && __DEV__;
 process.env.NODE_ENV = isDev ? 'development' : 'production';
 if (typeof localStorage !== 'undefined') {
   localStorage.debug = isDev ? '*' : '';
-}
-
-if (!global.WebAssembly) {
-  global.WebAssembly = require('webassemblyjs');
 }
 
 // If using the crypto shim, uncomment the following line to ensure

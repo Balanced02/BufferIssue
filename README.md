@@ -27,14 +27,22 @@ Required to run android
       export PATH=$PATH:$ANDROID_HOME/emulator
       export PATH=$PATH:$ANDROID_HOME/platform-tools
   ```
-    - Type `Esc` key then`:wq` to save and quit the editor
+    - Press `Esc` key key then type `:wq` to save and quit the editor
   - Alternatively, you can create a `local.properties` file in the `android` folder of the project with this line `sdk.dir =/Users/{username}/Library/Android/sdk`
+- Create a new Virtual Device
+  - Click `More Actions` on `Android Studio`
+  - Select `Virtual Device Manager`
+  - Select Any of the google arm packages and click next
+  - Give the device a name or leave the default name and click Next
+  - Select `Portrait` orientation and click finish
 
 ### To run the project
 - Clone the project
 - Run `yarn && yarn run link && npx pod-install`
+
 To run on android:
 - Run `yarn run android`
+
 To run on iOS
 - Run `yarn run ios`
 

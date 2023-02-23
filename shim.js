@@ -22,13 +22,20 @@ if (typeof process === 'undefined') {
   }
 }
 
+/**
+ * We have to do these on android as disabling hermes on android
+ * removes the default support for Buffer and WebAssembly
+ */
 if (isAndroid) {
-  require('react-native-wasm');
   global.Buffer = require('buffer').Buffer;
+  const hey = global.Buffer.from('Hello World');
+  console.log('shim-js Buffer', hey);
+  console.log('shim-js Buffer-string', hey.toString());
 
   global.Buffer.prototype.reverse = function () {
     return require('buffer-reverse')(this, arguments);
   };
+  require('react-native-wasm');
 }
 
 process.browser = false;

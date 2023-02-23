@@ -68,6 +68,7 @@
   },
   "react-native": {
     "zlib": "browserify-zlib",
+    "buffer": "@craftzdog/react-native-buffer",
     "console": "console-browserify",
     "constants": "constants-browserify",
     "crypto": "react-native-crypto",

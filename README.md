@@ -8,7 +8,7 @@ OR:
 - brew install watchman
 - For mac system, install [XCode](https://apps.apple.com/ng/app/xcode/id497799835?mt=12)
 
-Required to run android (This can be skipped as we can replicate this error on iOS too)
+Required to run android
 - Download Java Development Kit `brew tap homebrew/cask-versions` && `brew install --cask zulu11`
 - Download and Install [Android Studio](https://developer.android.com/studio)
 - Install Android SDK
@@ -27,7 +27,7 @@ Required to run android (This can be skipped as we can replicate this error on i
       export PATH=$PATH:$ANDROID_HOME/emulator
       export PATH=$PATH:$ANDROID_HOME/platform-tools
   ```
-    - Type `:wq` to save and quit the editor
+    - Type `Esc` key then`:wq` to save and quit the editor
   - Alternatively, you can create a `local.properties` file in the `android` folder of the project with this line `sdk.dir =/Users/{username}/Library/Android/sdk`
 
 ### To run the project
@@ -68,7 +68,7 @@ const hashOptions = {
 
       const result = await HashWasm.argon2id(hashOptions);
 ```
-- This throws an error: `Module must be either an ArrayBuffer or an Uint8Array (BufferSource), object given.`
+- This throws an error: `[TypeError: undefined is not an object (evaluating 'buffer.toString')]`
 - NB: This happens only when debugger mode is disabled. If you're debugging with chrome, the function works fine without any errors
 
 ### My Opinion
